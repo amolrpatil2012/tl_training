@@ -26,7 +26,7 @@ public class InstanceOfDemo {
 
 	public static void show ( P obj )
 	{
-		if ( obj instanceof Q)		// will check if obj is referring to object of class Q
+		if ( obj instanceof Q )		// will check if obj is referring to object of class Q
 		{
 			System.out.println("This is an instance of Q");
 			obj.display();
