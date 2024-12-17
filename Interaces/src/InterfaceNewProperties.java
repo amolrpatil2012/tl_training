@@ -7,12 +7,15 @@
  * 		|
  * 		We can define method with definition inside an interface
  * 
- * 		Private Method
+ * 		Private Method [ rarely used ]
  * 		|
  * 		We can define some common code required for default methods
  * 		inside private method
  * 
  * 		Static Method
+ * 		|
+ * 		Writing static method in a class and in a interface have same
+ * 		meaning
  * 		
  * 
  */
