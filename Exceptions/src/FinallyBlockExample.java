@@ -1,4 +1,26 @@
-
+/*
+ * 		finally block
+ * 		|
+ * 		If any code if you want to execute in either cases
+ * 			1. Exception 2. No Exception
+ * 		then define that code inside finally block
+ * 
+ * 		try
+ * 		{
+ * 		}
+ * 		catch ..
+ * 		finally ...
+ * 
+ * 		try
+ * 		{
+ * 				
+ * 		}
+ * 		finally
+ * 		{
+ * 
+ * 		}
+ * 
+ */
 class Demo
 {
 	void open()
@@ -24,7 +46,7 @@ class Demo
 		}
 		finally
 		{
-			close();
+			close();			// this will work in both cases
 		}
 	}
 }

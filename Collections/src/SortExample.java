@@ -40,9 +40,9 @@ class Emp implements Comparable<Emp>
 	@Override
 	public int compareTo(Emp emp) {
 		
-		//return this.age - emp.age;				// comparison of emp objects on basis of age
-		return this.name.compareTo(emp.name);		// comparison of emp objects on basis of name
-				
+		return this.age - emp.age;				// comparison of emp objects on basis of age
+		//return this.name.compareTo(emp.name);		// comparison of emp objects on basis of name
+		// return emp.age - this.age -- in descending order		
 	}
 	
 	

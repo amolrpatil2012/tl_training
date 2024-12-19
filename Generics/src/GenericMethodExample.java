@@ -12,7 +12,10 @@ public class GenericMethodExample {
 	public static void main(String[] args) {
 		
 		double d1 = 100 , d2 = 200;
-		display(d1,d2);
+		display(d1,d2);					// double ---> Double  boxing
+		
+		String s1 = "demo" , s2 = "xyz";
+		display(s1,s2);
 		
 	}
 
