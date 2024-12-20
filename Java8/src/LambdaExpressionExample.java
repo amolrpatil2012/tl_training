@@ -35,6 +35,7 @@ public class LambdaExpressionExample {
 		*/
 		// Implementation of a Functional Interface using Lambda Expression [ anonymous class , anonymous method ]
 		
+				// new DemoImpl();	
 		Demo d = ()->System.out.println("Hello World");		// single statement
 		d.show();
 		

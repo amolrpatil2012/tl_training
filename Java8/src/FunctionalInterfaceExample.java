@@ -2,8 +2,8 @@
 @FunctionalInterface			// which contains only one abstract method
 interface Calculator
 {
-	int add ( int x , int y);
-	
+	int add ( int x , int y);	
+		
 }
 
 class CalculatorImpl implements Calculator

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.function.Predicate;
 
 class Emp
 {
@@ -44,9 +44,10 @@ class Emp
 	
 	
 }
-public class AnotherPredicateExample {
+public class EmpManagement {
 	
 	public static void main(String[] args) {
+		
 		
 		List<Emp> emps = new ArrayList<Emp>();
 		emps.add(new Emp("Suresh","Manager","Pune",25000));
@@ -55,21 +56,39 @@ public class AnotherPredicateExample {
 		emps.add(new Emp("Rohit","Manager","Pune",25000));
 		emps.add(new Emp("Akaash","Manager","Pune",25000));
 		
-		Predicate<Emp> p1 = (emp)-> emp.getDesignation().equals("Manager");
+		// Print All Managers
+		emps
+			.stream()
+			.filter(e->e.getDesignation().equals("Manager"))
+			.forEach(System.out::println);		// e -> System.out.println(e)
 		
-		for(Emp emp : emps)
-			if(p1.test(emp))
-				System.out.println(emp);
+			
+		// Print All Emps Whose Salary < 20000
+		System.out.println("Emps Having Salary < 20000");
+		emps
+			.stream()
+			.filter(e->e.getSalary()<20000)
+			.forEach(System.out::println);	
 		
-		Predicate<Emp> p2 = (emp)-> emp.getCity().equals("Pune");
-		for(Emp emp : emps)
-			if(p2.test(emp))
-				System.out.println(emp);
+		// Print only name of Emps who belongs to Pune City
+		System.out.println("Emp Names from Pune City");
+		emps
+			.stream()
+			.filter(e->e.getCity().equals("Pune"))
+			.map(e->e.getName())
+			.forEach(System.out::println);
+				
+				
+				
+		// Print Max Salary
+		int maxSalary=
+		emps
+			.stream()			
+			.map(e->e.getSalary())	//e ["Sureh","Pune","Manager",25000] -> 25000
+			.max(Comparator.comparingInt(Integer::intValue)).get();
+		System.out.println("Max Salary" + maxSalary);
 		
-		Predicate<Emp> p3 = (emp)-> emp.getCity().equals("Banglore") || emp.getSalary()<20000;
-		for(Emp emp : emps)
-			if(p3.test(emp))
-				System.out.println(emp);
+		
 		
 		
 		

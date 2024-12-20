@@ -37,7 +37,7 @@ class LambdaExpressionAsArgumentAnotherExample
 //		s = new Triangle();
 //		System.out.println("Area = " + s.area(20, 20));
 				
-//		calculateArea( new Rect() );
+//		calculateArea( new Rect() );			
 //		calculateArea( new Triangle());
 		
 		// Lambda Expressions
