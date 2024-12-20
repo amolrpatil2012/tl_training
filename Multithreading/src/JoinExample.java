@@ -23,6 +23,8 @@
  * 		);
  * 		
  * 
+ * 	Runnable - functional interface -- contains only one method -- run() -- lambda expression
+ * 
  * 
  * 
  */
