@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="helloWorld" class="demo.firstspringproject.beans.HelloWorld">
+    	<property name="message" value="Hello World"></property>
+    </bean>
+    
+    <!-- Address addr = new Address ( "Mumbai" , "Maharashtra" , "India")  -->
+    
+    <bean id="addr" class="demo.firstspringproject.beans.Address">
+    	<constructor-arg value="Mumbai"></constructor-arg>
+    	<constructor-arg value="Maharashtra"></constructor-arg>
+    	<constructor-arg value="India"></constructor-arg>
+    </bean>
+    
+    <!--  Student stud = new Student("Suresh" , addr ) -->
+    
+    <bean id="stud" class="demo.firstspringproject.beans.Student">
+    	<constructor-arg value="Suresh"></constructor-arg>
+    	<constructor-arg><ref bean="addr" /> </constructor-arg>
+    </bean>
+    
+    <!-- Car c = new Car() -->
+    <bean id="c" class="demo.firstspringproject.beans.Bike">
+    	<property name="rentPerHour" value="10"></property>
+    	<property name="brand" value="Bajaj"></property>
+    </bean>
+    
+    <!--  Inject this car object in Customer Object Automatically-->
+    <bean id="cust" class="demo.firstspringproject.beans.Customer" autowire="byType">
+    </bean>
+    <!-- 
+		Spring container will find Vehicle object and inject in Customer
+		
+		Autowiring : Injecting [ wiring ] depedencies automatically 
+		
+	-->
+    
+
+</beans>
