@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Student s = new Student()-->
+    <!-- s.setRoll(1); s.setName("Suresh")-->
+    
+  	<bean id="s" class="teamlease.dependencyinjection.beans.Student">
+  		<property name="roll" value="1"></property>
+  		<property name="name" value="Suresh"></property>
+  	</bean>
+    
+    <!-- Student s1 = new Student( 2 , "Ravi" )-->
+    
+    <bean id="s1" class="teamlease.dependencyinjection.beans.Student">
+  		<constructor-arg value="2"></constructor-arg>
+  		<constructor-arg value="Ravi"></constructor-arg>
+  	</bean>
+  	
+  	<!-- 1. Create an Object of Message Service [ Email/SMS/Twitter ] -->
+  	<!-- 2. Create an Object of Message Processor-->
+  	<!-- 3. Autowire MessgaeService to MessageProcessor -->
+  	
+  	
+  	<!-- MessageService email = new EmailService() -->
+  	<!-- MessageProcessor processor = new MessageProcessor(email)-->
+  	
+  	<bean id="email" class="teamlease.dependencyinjection.beans.EmailService"/>  	
+  	
+  	<!-- autowiring using constructor injection-->
+  	<bean id="processor1" class="teamlease.dependencyinjection.beans.MessageProcessor" autowire="constructor"/>
+  	
+  	<!-- autowiring using byType injection  -->
+  	<!-- their must be only single object of given type [ MessageService ] -->
+  	<!-- <bean id="processor2" class="teamlease.dependencyinjection.beans.MessageProcessor" autowire="byType"/> -->
+  	
+  	<!-- MessageService service = new TwitterService() -->
+  	<!-- MessageProcessor processor3 = new MessageProcessor();-->
+  	<!-- processor3.setMessageService(service); -->
+  	<bean id="service" class="teamlease.dependencyinjection.beans.TwitterService"/>
+  	<bean id="processor3" class="teamlease.dependencyinjection.beans.MessageProcessor" autowire="byName"/>
+  	
+  	
+  	
+ 
+
+</beans>
