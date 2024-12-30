@@ -2,7 +2,7 @@ package demo.annotaiontconfiguration.beans;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("twitter")
 public class TwitterService implements MessageService {
 
 	@Override
