@@ -13,11 +13,14 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
  * 
  */
 
+
+// defines current class contains beans and componentscan
 @Configuration
 @ComponentScan (basePackages = {"demo.SpringCoreJDBC"})
 public class ProjectConfig {
 	
 	// This object will be managed by Spring Container
+	// DataSource i/f --> DriverManagerDataSource -- implements DataSource
 	@Bean
 	public DataSource getDataSourceBean()
 	{

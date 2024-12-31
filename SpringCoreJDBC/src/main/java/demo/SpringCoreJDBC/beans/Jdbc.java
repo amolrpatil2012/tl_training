@@ -19,11 +19,34 @@ public class Jdbc {
 		
 	}
 	
+	// Create Student
 	public void insert ( int roll , String fName , String lName)
 	{
-		String sql = "Insert Into Student Values ( ? , ? ,? ) ";
-		jt.update ( sql , roll , fName, lName);
+		
+			String sql = "Insert Into Student Values (? , ? ,? ) ";
+			jt.update ( sql , roll , fName, lName);
+	
 	}
+	
+	// Delete Student
+	public void delete ( int roll )
+	{
+		String sql = "Delete From Student Where Roll = "+roll;
+		jt.execute(sql);
+	}
+	
+	// Update Student
+	public void update ( int roll , String fname , String lname )
+	{
+		String sql = "Update Student Set firstname = ? , lastname =? where roll = ? ";
+		jt.update ( sql , fname, lname, roll);
+	}
+	
+	// Read Student
+	
+
+	
+	
 	
 	
 	
