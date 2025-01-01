@@ -23,12 +23,13 @@ public class ProjectConfig {
 			properties.setProperty(Environment.USER, "root");
 			properties.setProperty(Environment.PASS, "demodemo!");
 			
+			// not compulsory
 			properties.setProperty(Environment.SHOW_SQL, "true");
 			properties.setProperty(Environment.HBM2DDL_AUTO , "update"); // if table is not available hibernate will create new table
 			
 			org.hibernate.cfg.Configuration config = new org.hibernate.cfg.Configuration();
 			config.setProperties(properties);
-			config.addAnnotatedClass(Student.class);
+			config.addAnnotatedClass(Student.class); // Student is an entity
 			
 			return config.buildSessionFactory();		
 		

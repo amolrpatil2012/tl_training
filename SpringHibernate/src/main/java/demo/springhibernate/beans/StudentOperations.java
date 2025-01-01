@@ -73,7 +73,7 @@ public class StudentOperations {
 			transaction.commit();
 		}
 		else 
-			System.out.println("Record with given Roll No is Not Available");
+			System.out.println();
 		
 	}
 	// 34 , "AA" ,"XX"
