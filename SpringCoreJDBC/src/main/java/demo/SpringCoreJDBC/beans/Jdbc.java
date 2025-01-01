@@ -13,7 +13,7 @@ public class Jdbc {
 	JdbcTemplate jt;
 
 	@Autowired
-	public Jdbc(DataSource ds) {		// ds -- will be injected -- created in ProjectConfig
+	public Jdbc( DataSource ds ) {		// ds -- will be injected -- created in ProjectConfig
 		
 		jt = new JdbcTemplate(ds);
 		

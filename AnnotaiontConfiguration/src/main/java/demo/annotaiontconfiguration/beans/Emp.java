@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 // object of class will be created by IOC container
 
-@Component
+@Component("emp")
 public class Emp {
 
 	private int empid;

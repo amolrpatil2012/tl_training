@@ -14,7 +14,8 @@ public class App
     public static void main( String[] args )
     {
     	// container -- IOC Container    	
-    	ApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
+    	ApplicationContext container = 
+    			new ClassPathXmlApplicationContext("beans.xml");
  	
     	
     	// Reference will be Student

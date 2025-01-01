@@ -16,13 +16,39 @@ public class StudentOperations {
 	@Autowired
 	SessionFactory factory;
 	
-	
+	// 34 , "AA" , "BB"		-- new entry
 	public void insert ( Student student )
 	{
 		Session session =	factory.openSession();				// represents database connection
 		Transaction transaction = session.beginTransaction();	// represents database dml
-		session.persist(student);                               // insert query
-		transaction.commit();                                   // transaction will permanent
+		try
+		{
+			session.persist(student);                               // insert query
+			transaction.commit();                                   // transaction will permanent
+		}
+		catch(Exception e)
+		{
+			transaction.rollback();
+		}
+		
+		/*
+		 * 		List<Student> students;		// 100 students
+		 * 
+		 * 		try
+		 * 		{
+		 * 			for ( Student s : students )
+		 * 				session.persist(s);
+		 * 			session.commit();
+		 * 		}
+		 * 		catch(Exception e)
+		 * 		{
+		 * 				transaction.rollback();
+		 * 		}
+		 * 		
+		 * 
+		 * 
+		 */
+		
 		
 	}
 	// select * from student
@@ -41,11 +67,25 @@ public class StudentOperations {
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
 		Student st =	session.get(Student.class, roll);		// select student from where roll = 1
-		session.remove(st);
-		transaction.commit();
+		if ( st != null )
+		{
+			session.remove(st);
+			transaction.commit();
+		}
+		else 
+			System.out.println("Record with given Roll No is Not Available");
 		
 	}
-	
+	// 34 , "AA" ,"XX"
+		public void update ( Student newStudent )
+		{
+
+			Session session = factory.openSession();
+			Transaction transaction = session.beginTransaction();
+			session.persist(newStudent);				// update
+			transaction.commit();
+			
+		}
 	
 	
 	

@@ -30,6 +30,7 @@
   	
   	<bean id="email" class="teamlease.dependencyinjection.beans.EmailService"/>  	
   	
+  	
   	<!-- autowiring using constructor injection-->
   	<bean id="processor1" class="teamlease.dependencyinjection.beans.MessageProcessor" autowire="constructor"/>
   	
