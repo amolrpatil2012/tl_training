@@ -1,0 +1,109 @@
+	HTTP Protocol
+
+	Client Program [ Browser ] <-------------------------->Web Server Application [ Web ]
+			|									|
+		  HTML+CSS+JS								Tomcat / IIS / Jetty
+												|
+												Java/Python/JS-NodeJs
+	
+
+	Http Methods -- Governs how data from client to server will send
+
+		Get	-------------> request to get 
+		Post	-------------> to send 
+	
+	Request + Response
+		|
+		Header
+		Body
+
+
+
+	Browser/Mobile App
+	|
+	Register Form						
+	[	]							Web Server -- Tomcat
+	[	]							|
+	[submit]---Request--------------------> Java Server Program -- Servlet
+									|
+									Receive Request
+									|
+									Process Request
+									|
+									Generates output -- DYNAMIC HTML
+									|
+									Send output as a Response
+		<--------Response-------------------|	
+						
+
+	Servlet is a Java Program which runs on web server
+
+
+	Static Page Request
+
+		google.com--------------------------->server google.html
+			<--------sent google.html----------|
+
+	Dynamic Page Request
+
+
+	Browser ---------> Sends Request ---------> Server --- 
+										|
+										LoginServlet
+										RegServelt
+										ShowMailServlet
+										SendMailServlet
+										
+			Servlet
+			|
+			service ( request , response )
+			{
+					servlet process request
+					using response it will generate response
+
+			}
+
+	------------------------------------------------------------------------
+
+	gmail -- registration
+
+		username	[		]
+		password	[	]
+		fname
+		lname
+		birthdate
+
+	MVC	---	Model View and Controller
+
+		Model 					Data		e.g. User , Student , Emp
+	
+		View						HTML Page
+
+		Controller					Is a java program which receives request
+								and process and generates response [ servlet ]
+
+					 
+
+	Spring MVC Application
+	|
+	DispatcherServlet
+
+
+	--------------------------------------------
+
+	Browser ------- sends request----------> Server -- Tomcat
+										|
+									DispatcherServlet --- predefined program
+									[ FrontController ]
+										|
+									Checks which controller handles request
+										|
+									[ LoginController , RegController ..... ]	
+										|
+										Receives request
+										|
+										process -- generates data [ Model ]
+										                which view will display
+
+
+		
