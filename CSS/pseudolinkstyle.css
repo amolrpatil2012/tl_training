@@ -1,0 +1,17 @@
+/* styles the link state */
+a:link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    background-color: greenyellow;
+}
+
+/* styles the visited state */
+a:visited {
+    color: purple;
+}
+
+/* styles the hover state */
+a:hover {
+    text-decoration: underline;
+}

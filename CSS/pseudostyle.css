@@ -1,0 +1,7 @@
+div p:first-child {
+  color: red;
+}
+
+div p:last-child {
+  color: red;
+}

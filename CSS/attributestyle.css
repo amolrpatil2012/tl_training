@@ -1,0 +1,7 @@
+p[class] {
+  background-color: orange;
+}
+
+p[class="third"] {
+  color: blue;
+}

@@ -1,0 +1,15 @@
+/* Element Selectors */
+h1 {
+  color: red;
+}
+h2 {
+  color: orange;
+}
+/* Class Selector */
+.class-demo {
+  background-color: orange;
+}
+/* Id Selector */
+#id-demo {
+  color: red;
+}
