@@ -1,0 +1,25 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Roll</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (s of studentList; track $index) {
+      <tr>
+        <td>{{ s.roll }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.city }}</td>
+        <td>{{ s.isActive }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+
+  <h1>Applying style using Directive</h1>
+  <div [ngStyle]="customStyle"></div>
+</div>

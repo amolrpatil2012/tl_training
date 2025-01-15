@@ -1,0 +1,21 @@
+<div class="panel-body">
+  <div class="row">
+    <h3>Using Pipes</h3>
+    <p>Date : {{ tdate }}</p>
+    <p>After Pipe : {{ tdate | date }}</p>
+    <p>Chaining : {{ tdate | date | uppercase }}</p>
+    <p>{{ tdate | date : "dd/MM/yy" }}</p>
+  </div>
+  <div class="row">
+    <p>Complete String : {{ msg }}</p>
+    <p>Slice Pipe : {{ msg | slice : 0 : 5 }}</p>
+  </div>
+  <div class="row">
+    <p>{{ per | percent }}</p>
+    <p>{{ cur | currency }}</p>
+  </div>
+  <div class="row">
+    <h2>Convert C To F</h2>
+    <p>{{ tempC | tempConverter : "C" }}</p>
+  </div>
+</div>

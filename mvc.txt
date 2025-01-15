@@ -106,4 +106,8 @@
 										                which view will display
 
 
+	Browser ------------> Front Controller [ DispatcherServlet ]
+							|
+
+
 		

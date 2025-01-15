@@ -1,0 +1,63 @@
+<!-- Reactive Form -->
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label for="firstname">First Name</label>
+    <input
+      type="text"
+      id="firstname"
+      name="firstname"
+      formControlName="firstname"
+    />
+  </p>
+  <p>
+    <label for="lastname">Last Name</label>
+    <input
+      type="text"
+      id="lastname"
+      name="lastname"
+      formControlName="lastname"
+    />
+  </p>
+  <p>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" formControlName="email" />
+  </p>
+  <p>
+    <label for="gender">Gender</label>
+    <input
+      type="radio"
+      value="male"
+      id="gender"
+      name="gender"
+      formControlName="gender"
+    />Male
+    <input
+      type="radio"
+      value="female"
+      id="gender"
+      name="gender"
+      formControlName="gender"
+    />FeMale
+  </p>
+  <p>
+    <label for="isMarried">Married</label>
+    <input
+      type="checkbox"
+      id="ismarried"
+      name="ismarried"
+      formControlName="isMarried"
+    />
+  </p>
+  <p>
+    <label for="country">Country</label>
+    <select id="country" name="country" formControlName="country">
+      @for (c of countryList; track $index) {
+      <option [ngValue]="c.id">{{ c.name }}</option>
+      }
+    </select>
+  </p>
+
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
+</form>

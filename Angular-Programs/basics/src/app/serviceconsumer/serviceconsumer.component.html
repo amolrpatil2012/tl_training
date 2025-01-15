@@ -1,0 +1,24 @@
+<div class="container">
+  <button type="button" (click)="getProducts()">Get Products</button>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of products; track $index) {
+
+        <tr>
+          <td>{{ p.productID }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.price }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

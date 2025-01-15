@@ -1,0 +1,25 @@
+<p>This is my first component</p>
+
+<!-- String Interpolation -->
+<h2>Hello {{ firstName + " " + lastName }}</h2>
+<h3 style.color="{{ color }}">My Profession is {{ getProfession() }}</h3>
+
+<!-- innerHtml : inner html of p tag -->
+<!-- Property Binding : set property of html tag through typescript-->
+<p [innerHTML]="text1"></p>
+<div [innerHTML]="text2"></div>
+<h3 [style.color]="color">Color set using Property Binding</h3>
+
+<!-- Event Binding -->
+<button (click)="onClick()">Click</button>
+{{ "Count : " + count }}
+
+<!--$event variable contains information of an event -->
+<!-- sending data from html to typescript : eventbinding -->
+<input type="text" (input)="onChange($event)" />
+<!-- sending data from typescript to html : string interpolation-->
+{{ text3 }}
+
+<!-- Two Way Data Binding : Property Binding + Event Binding -->
+<input type="text" [(ngModel)]="text4" />
+{{ text4 }}

@@ -1,0 +1,42 @@
+<!-- Template Variabale -->
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+  <p>
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" ngModel />
+  </p>
+  <p>
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" ngModel />
+  </p>
+  <p>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" ngModel />
+  </p>
+  <p>
+    <label for="gender">Gender</label>
+    <input type="radio" value="male" id="gender" name="gender" ngModel />Male
+    <input
+      type="radio"
+      value="female"
+      id="gender"
+      name="gender"
+      ngModel
+    />FeMale
+  </p>
+  <p>
+    <label for="isMarried">Married</label>
+    <input type="checkbox" id="ismarried" name="ismarried" ngModel />
+  </p>
+  <p>
+    <label for="country">Country</label>
+    <select id="country" name="country" ngModel>
+      @for (c of countryList; track $index) {
+      <option [ngValue]="c.id">{{ c.name }}</option>
+      }
+    </select>
+  </p>
+
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
+</form>

@@ -1,0 +1,25 @@
+1. Tools->Options->automatically->general-> []	Console.ReadKey()
+
+2. *.cs ->compiler---> *.dll
+   Right click on project open folder in file explorer explain folders
+
+3. Implicitly typed variables
+
+		var name = "demo";
+		var no = 10;
+
+4. String interpolation 		$"My Name is {name} And my Age is {age}
+
+5. Arrays --- ^ operator	a[^1]	last element
+
+	int[,]arr = new int[3,3]
+
+	foreach ( var word in words )....
+
+6. List
+
+	List<string> words = new List<string>();
+
+7. out keyword
+
+8. Properties 	prop / propfull
